@@ -131,9 +131,6 @@ function timerComplete() {
     startBtn.disabled = false;
     pauseBtn.disabled = true;
     startBtn.textContent = 'Start Timer';
-
-    // Request browser notification permission
-    requestNotificationPermission();
 }
 
 // Play notification sound

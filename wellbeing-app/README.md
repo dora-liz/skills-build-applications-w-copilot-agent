@@ -10,7 +10,7 @@ Engineers often get deeply focused on their work and forget to take breaks. This
 - Mental fatigue and reduced productivity
 - Stress and burnout
 
-This app implements the **Pomodoro Technique** adapted for engineer wellbeing with a 20-minute timer that reminds you to:
+This app uses a **20-minute timer technique** inspired by the Pomodoro method and adapted specifically for engineer wellbeing. It reminds you to:
 - 🚶 Take a short walk
 - 👀 Look away from the screen (following the 20-20-20 rule)
 - 💧 Stay hydrated
