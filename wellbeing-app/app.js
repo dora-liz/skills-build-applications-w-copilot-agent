@@ -122,6 +122,9 @@ function timerComplete() {
     // Show modal
     showBreakModal();
 
+    // Show browser notification
+    showBrowserNotification();
+
     // Reset timer for next session
     timeLeft = 20 * 60;
     updateDisplay();
@@ -220,10 +223,3 @@ document.addEventListener('visibilitychange', () => {
         // pauseTimer();
     }
 });
-
-// Show browser notification when timer completes
-const originalTimerComplete = timerComplete;
-timerComplete = function() {
-    originalTimerComplete();
-    showBrowserNotification();
-};
