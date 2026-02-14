@@ -1,0 +1,50 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.App header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.list-group-item {
+  border: 1px solid #e9ecef;
+  border-radius: 10px !important;
+  margin-bottom: 10px;
+  transition: box-shadow 0.2s;
+}
+
+.list-group-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-switch .form-check-input {
+  cursor: pointer;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.form-select-sm {
+  cursor: pointer;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
