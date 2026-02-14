@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer Wellbeing Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧘 Engineer Wellbeing Timer</h1>
+            <p class="subtitle">Your health matters. Take regular breaks to stay productive and healthy.</p>
+        </header>
+
+        <main>
+            <div class="timer-card">
+                <div class="timer-display">
+                    <span id="minutes">20</span>
+                    <span class="separator">:</span>
+                    <span id="seconds">00</span>
+                </div>
+                <p class="timer-label">Until your next break</p>
+                
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-primary">Start Timer</button>
+                    <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+                    <button id="resetBtn" class="btn btn-tertiary">Reset</button>
+                </div>
+            </div>
+
+            <div class="stats-card">
+                <h3>📊 Today's Stats</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-value" id="breaksCompleted">0</span>
+                        <span class="stat-label">Breaks Taken</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalTime">0</span>
+                        <span class="stat-label">Minutes Worked</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-card">
+                <h3>💡 Break Suggestions</h3>
+                <ul class="tips-list">
+                    <li>🚶 Take a 5-minute walk around the office or outside</li>
+                    <li>👀 Look at something 20 feet away for 20 seconds (20-20-20 rule)</li>
+                    <li>💧 Get a glass of water and hydrate</li>
+                    <li>🙆 Do some simple stretches for your neck and shoulders</li>
+                    <li>🧘 Practice deep breathing exercises</li>
+                    <li>🪟 Step outside and get some fresh air</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>💻 Built for engineers who care about their wellbeing</p>
+        </footer>
+    </div>
+
+    <!-- Break reminder modal -->
+    <div id="breakModal" class="modal">
+        <div class="modal-content">
+            <h2>⏰ Time for a Break!</h2>
+            <p class="modal-message">You've been working for 20 minutes. Time to:</p>
+            <ul class="break-actions">
+                <li>🚶 Take a short walk (5 minutes)</li>
+                <li>👀 Look away from the screen</li>
+                <li>💧 Grab some water</li>
+            </ul>
+            <button id="closeModal" class="btn btn-primary">Got it! Taking a break</button>
+        </div>
+    </div>
+
+    <audio id="notificationSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiP1fPPejAFJHXE8+GUQwoUXLLp7axaFgpHn97yvmwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFgpHn97yvWwhBjiO1fPPejAFJHXE8+KUQwoUXLPp7axaFg==" type="audio/wav">
+    </audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
